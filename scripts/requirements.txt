@@ -1,0 +1,6 @@
+pyttsx
+speechRecognition
+datetime
+wikipedia
+pypiwin32
+pyaudio
