@@ -1,1 +1,1 @@
-JARVIS_lib\Scripts\python.exe Main.py
+JARVIS_lib\python.exe Main.py
