@@ -7,4 +7,4 @@ Steps to use this link:-
 	3)Extract the zip file to the downloaded folder of this repository.
 	4)Ensure that the python.exe file's location is as follows: 'JARVIS_lib\Scripts\python.exe'
 Link:- https://drive.google.com/drive/folders/1_UKnW2MWd8WWpNmeNZgO4LbhrRQ2R3-V?usp=sharing
->>>>>>> 4a98f434b7c3618324d0a10904c6936db4bab2fe
+>>>>>>>
