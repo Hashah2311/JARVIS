@@ -52,3 +52,22 @@ if __name__ == "__main__":
                 speak(e)
         elif 'jarvis' in query:
             intro()
+        elif 'google' in query:
+            query = query.replace('google', '')
+            for results in search(query, tld="co.in", num=1, stop=1, pause=2):
+                speak("Found! Redirecting")
+                print(results)
+                webbrowser.open(results)
+        elif 'weather' in query:
+            url = 'http://ipinfo.io/json'
+            response = urlopen(url)
+            data = json.load(response)
+            city = data['city']
+            google = "https://google.com/search?q=weather+in+" + city
+            request_result = requests.get(google)
+            soup = bs4.BeautifulSoup( request_result.text, "html.parser" )
+            temp = soup.find( "div" , class_='BNeawe' ).text 
+            speak("The temperature in")
+            speak(city)
+            speak("is")
+            speak(temp)

@@ -1,4 +1,4 @@
-version = "V-0.0.1"
+version = "V-0.0.2"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
 import time
@@ -10,6 +10,12 @@ import datetime
 import wikipedia
 import smtplib
 import webbrowser
+import requests 
+import bs4
+import re
+import json
+from googlesearch import search
+from urllib2 import urlopen
 
 engine = pyttsx.init('sapi5')
 voices = engine.getProperty('voices')
@@ -37,6 +43,7 @@ def takeCommand():
     try:
         print("Recognizing...")    
         query = r.recognize_google(audio, language='en-in')
+        print(query)
     except Exception as e:    
         print("Say that again please...")  
         return "None"
@@ -54,40 +61,27 @@ def intro():
 
 def animation():
     os.system("cls")
-    # String to be displayed when the application is loading
-    load_str = "starting jarvis..."
+    load_str = "STARTING JARVIS..."
     ls_len = len(load_str)
     print(version)
   
-    # String for creating the rotating line
     animation = "|/-\\"
     anicount = 0
       
-    # used to keep the track of
-    # the duration of animation
     counttime = 0        
-      
-    # pointer for travelling the loading string
+
     i = 0                     
   
     while (counttime != 100):
-          
-        # used to change the animation speed
-        # smaller the value, faster will be the animation
+
         time.sleep(0.1)
 
-        # converting the string to list
-        # as string is immutable
         load_str_list = list(load_str) 
           
-        # x->obtaining the ASCII code
         x = ord(load_str_list[i])
-          
-        # y->for storing altered ASCII code
+
         y = 0                             
   
-        # if the character is "." or " ", keep it unaltered
-        # switch uppercase to lowercase and vice-versa 
         if x != 32 and x != 46:             
             if x>90:
                 y = x-32
@@ -95,17 +89,13 @@ def animation():
                 y = x + 32
             load_str_list[i]= chr(y)
           
-        # for storing the resultant string
         res =''             
         for j in range(ls_len):
             res = res + load_str_list[j]
-              
-        # displaying the resultant string
+
         sys.stdout.write("\r"+res + animation[anicount])
         sys.stdout.flush()
   
-        # Assigning loading string
-        # to the resultant string
         load_str = res
   
           
@@ -116,5 +106,8 @@ def animation():
     if os.name =="nt":
         os.system("cls")
         print("Loaded!")
-        time.sleep(2.5)
+        time.sleep(1)
+        os.system("cls")
+        print("Author:Harshit Shah")
+        time.sleep(1)
         os.system("cls")
