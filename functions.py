@@ -1,4 +1,4 @@
-version = "V-0.0.2"
+version = "V-0.0.3"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
 import time
@@ -14,7 +14,6 @@ import requests
 import bs4
 import re
 import json
-from googlesearch import search
 from urllib2 import urlopen
 
 engine = pyttsx.init('sapi5')
@@ -44,9 +43,10 @@ def takeCommand():
         print("Recognizing...")    
         query = r.recognize_google(audio, language='en-in')
         print(query)
-    except Exception as e:    
-        print("Say that again please...")  
-        return "None"
+    except Exception as e:
+        print(e)  
+    #    print("Say that again please...")  
+    #    return "None"
     return query
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -109,5 +109,27 @@ def animation():
         time.sleep(1)
         os.system("cls")
         print("Author:Harshit Shah")
-        time.sleep(1)
+        time.sleep(2.5)
         os.system("cls")
+
+def news():
+    speak("Searching For News...")
+    news_headlines = []
+    res = requests.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=3c7091dbbd9547cca52fcd852572d7a9&category=general").json()
+    articles = res["articles"]
+    for article in articles:
+        news_headlines.append(article["title"])
+    speak(news_headlines[:5])
+
+def joke():
+    headers = {
+        'Accept': 'application/json'
+    }
+    res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
+    jokes = res["joke"]
+    speak(jokes)
+
+def advice():
+    res = requests.get("https://api.adviceslip.com/advice").json()
+    advice = res['slip']['advice']
+    speak(advice)

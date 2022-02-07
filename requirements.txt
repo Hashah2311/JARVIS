@@ -4,6 +4,5 @@ datetime
 wikipedia
 pypiwin32
 pyaudio
-google
 requests
 bs4
