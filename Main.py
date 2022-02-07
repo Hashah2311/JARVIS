@@ -72,12 +72,12 @@ if __name__ == "__main__":
             google2 = requests.get(google)
             soup = bs4.BeautifulSoup(google2.text, "html.parser" )
             temp = soup.find( "div" , class_='BNeawe' ).text
-            report = soup.select('#wob_dc')[0].getText().strip()
             weather_url = 'https://api.openweathermap.org/data/2.5/weather?' + 'q=' + city + '$appid=6df3640e0f36dfc3479361494ac0dfcd'
             request_result = requests.get(weather_url)
             data = request_result.json()
             main = data['main']
             pressure = main['pressure']
+            report = data['weather']
             humidity = main['humidity']
             speak("Condition in your city:")
             speak("Temperature:")
