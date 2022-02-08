@@ -14,10 +14,10 @@ if __name__ == "__main__":
             speak(results)
         elif 'open google' in query:
             webbrowser.open("google.com")
-#       elif 'play music' in query:
-#           songs = os.listdir(music_dir)
-#           print(songs)    
-#           os.startfile(os.path.join(music_dir, songs[0]))
+#        elif 'play music' in query:
+#            songs = os.listdir(music_dir)
+#            print(songs)    
+#            os.startfile(os.path.join(music_dir, songs[0]))
         elif 'time' in query:
             time = "Sir, the time is", datetime.datetime.now().strftime("%H:%M:%S")    
             speak(time)
@@ -111,12 +111,19 @@ if __name__ == "__main__":
         elif 'exit' in query:
             speak("Good bye! have a nice day!")
             exit()
+        elif 'mic' in query:
+            speak("Ok sir!")
+            unmute_mic()
         else:
-            print("Command not found...")
             speak("Searching Google for")
             speak(query)
             query = query.replace('google', '')
             query = query.replace(' ', '+')
             google = "https://google.com/search?q=" + query
-            speak("Found! Redirecting...")
-            webbrowser.open(google)
+            speak("Found! Do you want me to open on google?...")
+            answer = takeCommand()
+            if 'yes' in answer:
+                speak("ok")
+                webbrowser.open(google)
+            else:
+                speak("ok")

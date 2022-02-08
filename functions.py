@@ -1,4 +1,4 @@
-version = "V-0.0.3"
+version = "V-0.0.4"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
 import time
@@ -44,9 +44,10 @@ def takeCommand():
         query = r.recognize_google(audio, language='en-in')
         print(query)
     except Exception as e:
-        print(e)  
+    #    print(e)  
     #    print("Say that again please...")  
     #    return "None"
+        query = r.recognize_google(audio, language='en-in')
     return query
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -133,3 +134,6 @@ def advice():
     res = requests.get("https://api.adviceslip.com/advice").json()
     advice = res['slip']['advice']
     speak(advice)
+
+def unmute_mic():
+    os.system("JARVIS_lib\python.exe mic\process.py")

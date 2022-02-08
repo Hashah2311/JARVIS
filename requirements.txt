@@ -6,3 +6,5 @@ pypiwin32
 pyaudio
 requests
 bs4
+psutil
+pyautogui
