@@ -43,12 +43,13 @@ def takeCommand():
         print("Recognizing...")    
         query = r.recognize_google(audio, language='en-in')
         print(query)
+        return query
     except Exception as e:
-    #    print(e)  
+        print(e)
+        query = takeCommand().lower
     #    print("Say that again please...")  
     #    return "None"
-        query = r.recognize_google(audio, language='en-in')
-    return query
+    #    query = r.recognize_google(audio, language='en-in')
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
