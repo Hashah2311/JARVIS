@@ -2,13 +2,9 @@ Hi there Users!<br />
 I am glad that you are here!<br />
 This is my first project so pardon me for any errors. So about this project:-<br />
 This is JARVIS, your personal assistant in command line! It is completely based on python. I have also provided an
-virtualenv named JARVIS_lib. If you dont know how to use it you can also use the run.ps1(for powershell) or run.cmd(for command
+virtualenv named env. If you dont know how to use it you can also use the run.ps1(for powershell) or run.cmd(for command
 prompt) scripts. This assistant is currently supported only for windows as i dont have any linux pc. You dont need to install
-python to run this assistant. You can use either the env or the scripts provided(All the scripts are placed in scripts folder
-(Accept run.ps1/run.cmd)). But if you want to, than install python 2.7 only, as this project is made with modules of python 2.7.
-After installing python 2.7, if you have installed it globally(means you have added it to path,etc.) then use the script
-install(global).ps1(or install(global).cmd) or open the install(side).ps1 (or install(side).cmd) with notepad, then replace
-"PATH TO PYTHON 2" with the path to python 2's python.exe file(WITH QUOTES!).<br />
+python to run this assistant. You can use the env. But if you want to, than install python 3, as this project is made with python 3.<br />
 This assistant currently have following features:-<br />
 --->1)Wish the user!<br />
 --->2)Introduce itself<br />
