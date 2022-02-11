@@ -1,6 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./JARVIS_lib/Lib/site-packages",
-        "./JARVIS_lib/Lib"
+        "./env/Lib/site-packages",
+        "./env/Lib"
     ]
 }
