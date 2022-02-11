@@ -14,7 +14,7 @@ import requests
 import bs4
 import re
 import json
-from urllib2 import urlopen
+import urllib
 
 engine = pyttsx.init('sapi5')
 voices = engine.getProperty('voices')
@@ -43,13 +43,10 @@ def takeCommand():
         print("Recognizing...")    
         query = r.recognize_google(audio, language='en-in')
         print(query)
-        return query
     except Exception as e:
-        print(e)
-        query = takeCommand().lower
-    #    print("Say that again please...")  
-    #    return "None"
-    #    query = r.recognize_google(audio, language='en-in')
+        print("Say that again please...")  
+        return "None"
+    return query
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()

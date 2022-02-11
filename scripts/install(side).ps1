@@ -1,1 +1,0 @@
-"PATH TO PYTHON 2" -m pip install -r requirements.txt

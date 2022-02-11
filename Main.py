@@ -63,7 +63,7 @@ if __name__ == "__main__":
         elif 'weather' in query:
             speak("Detecting your city...")
             url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=85ef8f826f7e42c6ad55b2f3f2d45758'
-            response = urlopen(url)
+            response = urllib.request.urlopen(url)
             data = json.load(response)
             city = data['city']
             speak("Getting weather for")
@@ -72,22 +72,16 @@ if __name__ == "__main__":
             google2 = requests.get(google)
             soup = bs4.BeautifulSoup(google2.text, "html.parser" )
             temp = soup.find( "div" , class_='BNeawe' ).text
-            weather_url = 'https://api.openweathermap.org/data/2.5/weather?' + 'q=' + city + '$appid=6df3640e0f36dfc3479361494ac0dfcd'
+            weather_url = 'https://api.openweathermap.org/data/2.5/weather?' + 'q=' + city + '&appid=6df3640e0f36dfc3479361494ac0dfcd'
             request_result = requests.get(weather_url)
             data = request_result.json()
             main = data['main']
-            pressure = main['pressure']
-            report = data['weather']
-            humidity = main['humidity']
+            humidity = main['humidity'], "%"
             speak("Condition in your city:")
             speak("Temperature:")
             speak(temp)
-            speak("Pressure:")
-            speak(pressure)
             speak("Humidity:")
             speak(humidity)
-            speak("Weather is")
-            speak(report)
         elif 'what is my ip' in query:
             speak("Searching for your ip...")
             base = requests.get('https://api64.ipify.org?format=json').json()
@@ -115,15 +109,13 @@ if __name__ == "__main__":
             speak("Ok sir!")
             unmute_mic()
         else:
-            speak("Searching Google for")
-            speak(query)
-            query = query.replace('google', '')
-            query = query.replace(' ', '+')
-            google = "https://google.com/search?q=" + query
-            speak("Found! Do you want me to open on google?...")
-            answer = takeCommand()
-            if 'yes' in answer:
-                speak("ok")
-                webbrowser.open(google)
+            if 'none' in query:
+                e = "error"
             else:
-                speak("ok")
+                speak("Searching Google for")
+                speak(query)
+                query = query.replace('google', '')
+                query = query.replace(' ', '+')
+                google = "https://google.com/search?q=" + query
+                speak("Found! Opening On google.")
+                webbrowser.open(google)
