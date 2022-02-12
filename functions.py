@@ -1,4 +1,4 @@
-version = "V-0.0.4"
+version = "V-0.0.5"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
 import time
