@@ -10,6 +10,7 @@ This assistant currently have following features:-<br />
 --->2)Introduce itself<br />
 --->3)Search wikipedia<br />
 --->4)Play songs<br />
+--->5)Open Google<br />
 --->6)Email to someone(Please see Editions.txt file)<br />
 --->7)Tell time<br />
 --->8)Tell weather<br />
