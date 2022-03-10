@@ -1,6 +1,7 @@
 version = "V-0.1.5"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
+nversion = "V-beta-2"
 import time
 import sys
 import os
@@ -135,3 +136,13 @@ def advice():
 
 def unmute_mic():
     os.system("env\python.exe mic\process.py")
+
+def updates():
+    link = f"github.com/Hashah2311/JARVIS/releases/tag/{nversion}"
+    try:
+        urllib.request.urlopen(link)
+        speak("Updates Available!")
+        speak("Opening update page in browser")
+        webbrowser.open(link)
+    except urllib.error.Httperror:
+        speak("No new update available currently")

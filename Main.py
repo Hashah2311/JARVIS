@@ -108,6 +108,8 @@ if __name__ == "__main__":
         elif 'mic' in query:
             speak("Ok sir!")
             unmute_mic()
+        elif "check for updates" in query:
+            updates()
         else:
             if 'none' in query:
                 e = "error"
