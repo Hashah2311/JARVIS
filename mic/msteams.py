@@ -1,5 +1,5 @@
 import pyautogui
-from speak_func import *
+from speak_f import *
 msteams = 'msTeams_mic.png'
 try:
     buttonx, buttony = pyautogui.locateCenterOnScreen(msteams)

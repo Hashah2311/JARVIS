@@ -134,4 +134,4 @@ def advice():
     speak(advice)
 
 def unmute_mic():
-    os.system("JARVIS_lib\python.exe mic\process.py")
+    os.system("env\python.exe mic\process.py")
