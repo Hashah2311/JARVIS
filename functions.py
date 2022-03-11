@@ -138,11 +138,11 @@ def unmute_mic():
     os.system("env\python.exe mic\process.py")
 
 def updates():
-    link = f"github.com/Hashah2311/JARVIS/releases/tag/{nversion}"
+    link = f"https://www.github.com/Hashah2311/JARVIS/releases/tag/{nversion}"
     try:
         urllib.request.urlopen(link)
         speak("Updates Available!")
         speak("Opening update page in browser")
         webbrowser.open(link)
-    except urllib.error.Httperror:
+    except urllib.error.HTTPError:
         speak("No new update available currently")
