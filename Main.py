@@ -110,6 +110,9 @@ if __name__ == "__main__":
             unmute_mic()
         elif "check for updates" in query:
             updates()
+        elif "calculate" in query:
+            query = query.replace('calculate ', '')
+            calculate(query)
         else:
             if 'none' in query:
                 e = "error"

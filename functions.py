@@ -1,7 +1,7 @@
-version = "V-0.1.5"
+version = "V-0.2.0"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
-nversion = "V-beta-2"
+nversion = "V-beta-2.5"
 import time
 import sys
 import os
@@ -16,6 +16,7 @@ import bs4
 import re
 import json
 import urllib
+import wolframalpha
 
 engine = pyttsx.init('sapi5')
 voices = engine.getProperty('voices')
@@ -146,3 +147,12 @@ def updates():
         webbrowser.open(link)
     except urllib.error.HTTPError:
         speak("No new update available currently")
+
+def calculate(question):
+    try:
+        client = wolframalpha.Client("42H99P-JYULKAR7QQ")
+        answer = client.query(question)
+        answer = next(answer.results).text
+        speak(answer)
+    except:
+        speak("Sorry sir, I couldn't fetch your question's answer. Please try again.")
