@@ -17,6 +17,7 @@ import re
 import json
 import urllib
 import wolframalpha
+import pyaudio
 
 engine = pyttsx.init('sapi5')
 voices = engine.getProperty('voices')
@@ -40,10 +41,11 @@ def takeCommand():
     with sr.Microphone() as source:
         print("Now Listening...")
         r.pause_threshold = 1
+        audio = r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
     try:
         print("Recognizing...")    
-        query = r.recognize_google(audio, language='en-in')
+        query = r.recognize_google(audio, language='en-IN')
         print(query)
     except Exception as e:
         print("Say that again please...")  
