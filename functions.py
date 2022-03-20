@@ -1,7 +1,7 @@
-version = "V-0.2.0"
+version = "V-0.2.5"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
-nversion = "V-beta-2.5"
+nversion = "V-beta-3"
 import time
 import sys
 import os
@@ -18,6 +18,7 @@ import json
 import urllib
 import wolframalpha
 import pyaudio
+import pyfiglet
 
 engine = pyttsx.init('sapi5')
 voices = engine.getProperty('voices')
@@ -108,11 +109,14 @@ def animation():
 
     if os.name =="nt":
         os.system("cls")
+        result = pyfiglet.figlet_format("JARVIS")
         print("Loaded!")
         time.sleep(1)
+        print(result)
+        time.sleep(5)
         os.system("cls")
         print("Author:Harshit Shah")
-        time.sleep(2.5)
+        time.sleep(2)
         os.system("cls")
 
 def news():
