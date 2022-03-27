@@ -24,7 +24,6 @@
  - 10)Search on youtube 
  - 11)Get jokes 
  - 12)Get news 
- - 13)Give advice 
-#### If you have any issues you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more
-#### about the code,etc. you can mail me on "shahharshit063@gmail.com" and CC-"harshitshah@shilpakar.com"(Bonus shilpakar.com is not
-#### organisation, it is my school email id.)Thank you I will close for now, I am also working on the tutorial video so stay tuned!
+ - 13)Give advice
+# Extras
+#### If you have any issues you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com" and CC-"harshitshah@shilpakar.com"(Bonus shilpakar.com is not organisation, it is my school email id.)Thank you I will close for now, I am also working on the tutorial video so stay tuned!
