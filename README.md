@@ -1,4 +1,4 @@
-# JARVIS (Just a Rather Very Intelligent System)
+# JARVIS (Just A Rather Very Intelligent System)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
