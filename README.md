@@ -6,8 +6,8 @@
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
 
 # About this project:-
-####This is my first project so pardon me for any errors.
-####This is JARVIS, your personal assistant in command line! It is completely based on python. I have also provided an
+#### This is my first project so pardon me for any errors.
+This is JARVIS, your personal assistant in command line! It is completely based on python. I have also provided an
 virtualenv named env. If you dont know how to use it you can also use the run.ps1(for powershell) or run.cmd(for command
 prompt) scripts. This assistant is currently supported only for windows as i dont have any linux pc. You dont need to install
 python to run this assistant. You can use the env. But if you want to, than install python 3, as this project is made with python 3. 
