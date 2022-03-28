@@ -9,7 +9,7 @@
 #### This is my first project so pardon me for any errors.
 #### This is JARVIS, your personal assistant in command line! It is completely based on python. I have also provided an virtualenv named env. If you dont know how to use it you can also use the run.ps1(for powershell) or run.cmd(for command prompt) scripts. This assistant is currently supported only for windows as i dont have any linux pc.
 ## Installation
-#### I have provided zipped versions of the bot in the releases section of the project so you can download from there OR clone this repo.
+#### I have provided zipped versions of the bot in the [releases section](https://github.com/Hashah2311/JARVIS/releases) of the project so you can download from there OR clone this repo.
 #### You dont need to install python to run this assistant. You can use the env. But if you want to, than install python 3, as this project is made with python 3. 
 ## Features
 ### This assistant currently have following features:- 
