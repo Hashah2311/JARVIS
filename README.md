@@ -18,7 +18,7 @@
  - 3)Search wikipedia 
  - 4)Play songs 
  - 5)Open Google 
- - 6)Email to someone(Please see Editions.txt file) 
+ - 6)Email to someone [Please see Editions.txt file](https://github.com/Hashah2311/JARVIS/blob/master/Editions.txt)
  - 7)Tell time 
  - 8)Tell weather 
  - 9)Search on google 
