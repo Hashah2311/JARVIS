@@ -1,5 +1,5 @@
 # JARVIS (Just A Rather Very Intelligent System)
-[![GitHub version](https://badge.fury.io/gh/Hashah2311%2FJARVIS.svg)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&r=r&type=6e&v=0.0.0&x2=0)
+[![GitHub version](https://badge.fury.io/gh/Hashah2311%2FJARVIS.svg)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&r=r&type=6e&v=0.2.5&x2=0)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
