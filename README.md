@@ -38,12 +38,12 @@
     ├── __pycache__                                # Cache Folder
     ├── env                                        # ENV
     ├── mic                                        # Files For Mic Function
-    │   ├── Zoom_mic.png                          # Zoom's Mic Picture
-    │   ├── msTeams_mic.png                       # Team's Mic Picture
-    │   ├── msTeams.py                            # Script To Unmute MSTeam's Mic
-    │   ├── zoom.py                               # Script To Unmute MSTeam's Mic
-    │   ├── process.py                            # Process Checking Script
-    │   └── speak_f.py                            # Speak Function File
+    │   ├── Zoom_mic.png                           # Zoom's Mic Picture
+    │   ├── msTeams_mic.png                        # Team's Mic Picture
+    │   ├── msTeams.py                             # Script To Unmute MSTeam's Mic
+    │   ├── zoom.py                                # Script To Unmute MSTeam's Mic
+    │   ├── process.py                             # Process Checking Script
+    │   └── speak_f.py                             # Speak Function File
     ├── .gitattributes                             # gitattributes File
     ├── Editions.txt                               # Text File In Which Its Written What Parameters To Edit
     ├── Main.py                                    # Main JARVIS File
