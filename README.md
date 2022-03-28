@@ -1,4 +1,5 @@
 # JARVIS (Just A Rather Very Intelligent System)
+![build](https://github.com/Hashah2311/Hashah2311/actions/workflows/python-app.yml/badge.svg)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
