@@ -7,6 +7,8 @@
 ![GitHub Open-Issues](https://badgen.net/github/open-issues/Hashah2311/JARVIS?color=orange)
 ![GitHub Closed-Issues](https://badgen.net/github/closed-issues/Hashah2311/JARVIS?color=pink)
 ![GitHub Contributors](https://badgen.net/github/contributors/Hashah2311/JARVIS?color=purple)
+![GitHub Repo-Dependants](https://badgen.net/github/dependents-repo/Hashah2311/JARVIS?color=grey)
+![GitHub Pkg-Dependants](https://badgen.net/github/dependents-pkg/Hashah2311/JARVIS?color=black)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
