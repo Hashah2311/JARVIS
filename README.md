@@ -1,6 +1,11 @@
 # JARVIS (Just A Rather Very Intelligent System)
-![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&r=r&type=6e&v=0.2.5&x2=0)
+![GitHub version](https://badgen.net/github/release/Hashah2311/JARVIS?color=blue)
 ![GitHub license](https://badgen.net/github/license/Hashah2311/JARVIS?color=cyan)
+![GitHub Stars](https://badgen.net/github/stars/Hashah2311/JARVIS?color=green)
+![GitHub Forks](https://badgen.net/github/forks/Hashah2311/JARVIS?color=red)
+![GitHub Issues](https://badgen.net/github/issues/Hashah2311/JARVIS?color=yellow)
+![GitHub Open-Issues](https://badgen.net/github/open-issues/Hashah2311/JARVIS?color=orange)
+![GitHub Closed-Issues](https://badgen.net/github/closed-issues/Hashah2311/JARVIS?color=pink)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
