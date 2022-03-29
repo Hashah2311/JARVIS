@@ -1,5 +1,6 @@
 # JARVIS (Just A Rather Very Intelligent System)
 ![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&r=r&type=6e&v=0.2.5&x2=0)
+![GitHub license](https://badgen.net/github/license/Hashah2311/JARVIS?color=cyan)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
