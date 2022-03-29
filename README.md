@@ -6,6 +6,7 @@
 ![GitHub Issues](https://badgen.net/github/issues/Hashah2311/JARVIS?color=yellow)
 ![GitHub Open-Issues](https://badgen.net/github/open-issues/Hashah2311/JARVIS?color=orange)
 ![GitHub Closed-Issues](https://badgen.net/github/closed-issues/Hashah2311/JARVIS?color=pink)
+![GitHub Contributors](https://badgen.net/github/contributors/Hashah2311/JARVIS?color=purple)
 #### Hi there Users!
 #### I am glad that you are here!
 ## Built with
