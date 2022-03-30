@@ -1,0 +1,11 @@
+bs4
+datetime
+psutil
+pyautogui
+pyfiglet
+pypiwin32
+requests
+speechRecognition
+wheel
+Wikipedia
+wolframalpha
