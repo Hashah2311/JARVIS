@@ -1,16 +1,25 @@
 # JARVIS (Just A Rather Very Intelligent System)
 ![GitHub version](https://badgen.net/github/release/Hashah2311/JARVIS?color=blue)
+<!--- --->
 ![GitHub license](https://badgen.net/github/license/Hashah2311/JARVIS?color=cyan)
+<!--- --->
+<!---
 ![GitHub Stars](https://badgen.net/github/stars/Hashah2311/JARVIS?color=green)
 ![GitHub Forks](https://badgen.net/github/forks/Hashah2311/JARVIS?color=red)
+--->
 ![GitHub Issues](https://badgen.net/github/issues/Hashah2311/JARVIS?color=yellow)
+<!--- --->
 ![GitHub Open-Issues](https://badgen.net/github/open-issues/Hashah2311/JARVIS?color=orange)
+<!--- --->
 ![GitHub Closed-Issues](https://badgen.net/github/closed-issues/Hashah2311/JARVIS?color=pink)
+<!--- --->
 ![GitHub Contributors](https://badgen.net/github/contributors/Hashah2311/JARVIS?color=purple)
+<!--- --->
+<!---
 ![GitHub Repo-Dependants](https://badgen.net/github/dependents-repo/Hashah2311/JARVIS?color=grey)
 ![GitHub Pkg-Dependants](https://badgen.net/github/dependents-pkg/Hashah2311/JARVIS?color=black)
-#### Hi there Users!
-#### I am glad that you are here!
+--->
+#### Hi there Users! I am glad that you are here!
 ## Built with
 
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
