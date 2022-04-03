@@ -65,6 +65,6 @@
     ├── run.ps1                                    # Powershell Script To Run The Program
 
 ## Editions
-#### Please see [Editions.txt](https://github.com/Hashah2311/JARVIS/blob/master/Editions.txt) file
+#### Please see [Editions.txt](https://github.com/Hashah2311/JARVIS/blob/main/Editions.txt) file
 ## Extras
 #### If you have any issues, you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com" OR "harshitshah@shilpakar.com"(Bonus shilpakar.com is not my organisation, it is my school email id.)Thank you I will close for now, I am also working on the tutorial video so stay tuned!
