@@ -53,6 +53,12 @@
 ## Code Structure
 
 
+    ├── .github                                    # Github Files
+    │   ├── workflows                              # Workflow Folder
+    |   |   └──python-app.yaml                     # Workflow File
+    │   ├── README.md                              # This File
+    │   ├── LICENSE.md                             # License File
+    │   └── Editions.txt                           # Text File In Which Its Written What Parameters To Edit
     ├── .vscode                                    # VSCode Config Files
     ├── __pycache__                                # Cache Folder
     ├── env                                        # ENV
@@ -64,16 +70,14 @@
     │   ├── process.py                             # Process Checking Script
     │   └── speak_f.py                             # Speak Function File
     ├── .gitattributes                             # gitattributes File
-    ├── Editions.txt                               # Text File In Which Its Written What Parameters To Edit
     ├── Main.py                                    # Main JARVIS File
     ├── PyAudio-0.2.11-cp310-cp310-win_amd64.whl   # Wheel File For PyAudio Package
-    ├── README.md                                  # This File
     ├── functions.py                               # Functions
     ├── requirements.py                            # Automatically Installs Dependencies
     ├── run.cmd                                    # Command Prompt Script To Run The Program
-    ├── run.ps1                                    # Powershell Script To Run The Program
+    └── run.ps1                                    # Powershell Script To Run The Program
 
 ## Editions
-#### Please see [Editions.txt](https://github.com/Hashah2311/JARVIS/blob/main/Editions.txt) file
+#### Please see [Editions.txt](Editions.txt) file
 ## Extras
-#### If you have any issues, you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com" OR "harshitshah@shilpakar.com"(Bonus shilpakar.com is not my organisation, it is my school email id.)Thank you I will close for now, I am also working on the tutorial video so stay tuned!
+#### If you have any issues, you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com". Thank you I will close for now, I am also working on the tutorial video so stay tuned!
