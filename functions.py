@@ -1,7 +1,7 @@
-version = "V-0.2.5"
+version = "V-0.3.0"
 mail = 'YOUR MAIL ID'
 password = 'YOUR MAIL PASSWORD(DONT WORRY)'
-nversion = "V-beta-3"
+nversion = "V-beta-3.5"
 import time
 import sys
 import os
