@@ -1,6 +1,6 @@
 import os
-os.system("env\python.exe -m pip install bs4 datetime psutil pyautogui pyfiglet pypiwin32 requests speechRecognition wheel Wikipedia wolframalpha")
-whl = "env\python.exe -m pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl"
-os.system(whl)
-os.system("env\python.exe -m pip uninstall pyttsx")
-os.system("env\python.exe -m pip install git+https://github.com/jpercent/pyttsx.git")
+env = "env\python.exe"
+os.system(f"{env} -m pip install bs4 datetime pipwin psutil pyautogui pyfiglet pypiwin32 requests speechRecognition wheel Wikipedia wolframalpha")
+os.system(f"{env} -m pip uninstall pyttsx pyaudio")
+os.system(f"{env} -m pip install git+https://github.com/jpercent/pyttsx.git")
+os.system(f"{env} -m pipwin install pocketsphinx Pyaudio")

@@ -15,3 +15,5 @@ So if you are here, following are the editions:-
 			3)(Optional):
 				You can remove the hashes(#) from the play song command and replace 'PATH TO ANY SONG FILE' with the path
 				to any song file on your pc in single quotes('')
+            requirements.py:-
+                  1)Change 'env' variable to "python" if you want to install dependencies in main python installation
