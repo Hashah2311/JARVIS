@@ -139,7 +139,7 @@ except Exception as error:
             import requests
             import json
             import os
-            token = "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"
+            token = "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"
             headers = {f"Authorization" : "token {token}"}
             data = {"title": "JARVIS Error Reporting System Reported An Error"}
             label = {"labels": ["Error"]}
