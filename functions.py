@@ -180,13 +180,13 @@ except Exception as error:
             import requests
             import json
             import os
-            token = "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"
-            headers = {f"Authorization" : "token {token}"}
+            #headers = {f"Authorization" : "token {token}"}
             data = {"title": "JARVIS Error Reporting System Reported An Error"}
             label = {"labels": ["Error"]}
             body = {"body": [error]}
             url = "https://api.github.com/repos/Hashah2311/JARVIS/issues"
-            requests.post(url,data=json.dumps(data,label,body),headers=headers)
+            #requests.post(url,data=json.dumps(data,label,body),headers=headers)
+            requests.post(url,data=json.dumps(data,label,body))
             os.system("run.cmd")
             #exit()
         except:
