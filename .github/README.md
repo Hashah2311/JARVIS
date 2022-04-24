@@ -1,6 +1,8 @@
 # JARVIS (Just A Rather Very Intelligent System)
 ![GitHub version](https://badgen.net/github/release/Hashah2311/JARVIS?color=blue)
 <!--- --->
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Hashah2311/JARVIS/JARVIS?label=Build&style=plastic)
+<!--- --->
 ![GitHub license](https://badgen.net/github/license/Hashah2311/JARVIS?color=cyan)
 <!--- --->
 <!---
