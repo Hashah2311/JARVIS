@@ -39,7 +39,7 @@
 #### You dont need to install python to run this assistant. You can use the env. But if you want to, than install python 3, as this project is made with python 3. 
 ## Features
 ### This assistant currently have following features:- 
-![](".github/pics/Load.gif")
+![]("https://github.com/Hashah2311/JARVIS/blob/main/.github/pics/Load.gif")
 1. Wish the user! 
 2. Introduce itself 
 3. Search wikipedia 
