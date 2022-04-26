@@ -32,24 +32,24 @@
 #### You dont need to install python to run this assistant. You can use the env. But if you want to, than install python 3, as this project is made with python 3. 
 ## Features
 ### This assistant currently have following features:- 
- - 1)Wish the user! 
- - 2)Introduce itself 
- - 3)Search wikipedia 
- - 4)Play songs 
- - 5)Open Google 
- - 6)Email to someone
- - 7)Tell time 
- - 8)Tell weather 
- - 9)Search on google 
- - 10)Search on youtube 
- - 11)Get jokes 
- - 12)Get news 
- - 13)Give advice
- - 14)Get your ip
- - 15)Exit itself
- - 16)Unmute mic (Zoom/Teams)
- - 17)Check For Updates
- - 18)Calculate anything
+1. Wish the user! 
+2. Introduce itself 
+3. Search wikipedia 
+4. Play songs 
+5. Open Google 
+6. Email to someone
+7. Tell time 
+8. Tell weather 
+9. Search on google 
+10. Search on youtube 
+11. Get jokes 
+12. Get news 
+13. Give advice
+14. Get your ip
+15. Exit itself
+16. Unmute mic (Zoom/Teams)
+17. Check For Updates
+18. Calculate anything
 ## Code Structure
 
 
@@ -70,14 +70,15 @@
     │   ├── process.py                             # Process Checking Script
     │   └── speak_f.py                             # Speak Function File
     ├── .gitattributes                             # gitattributes File
+    ├── .gitignore                                 # gitignore File
+    ├── token.py                                   # Token File
     ├── Main.py                                    # Main JARVIS File
-    ├── PyAudio-0.2.11-cp310-cp310-win_amd64.whl   # Wheel File For PyAudio Package
     ├── functions.py                               # Functions
-    ├── requirements.py                            # Automatically Installs Dependencies
+    ├── __init__.py                                # Starting File
     ├── run.cmd                                    # Command Prompt Script To Run The Program
     └── run.ps1                                    # Powershell Script To Run The Program
 
 ## Editions
-#### Please see [Editions.txt](Editions.txt) file
+#### Please see [Editions.txt](.github/Editions.txt) file
 ## Extras
 #### If you have any issues, you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com". Thank you I will close for now, I am also working on the tutorial video so stay tuned!

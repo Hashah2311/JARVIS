@@ -126,28 +126,22 @@ try:
                     speak("Found! Opening On google.")
                     webbrowser.open(google)
 
+except KeyboardInterrupt:
+    import os
+    os.system("cls")
+    print("Assistant exited manually. Exiting JARVIS.")
+    exit()
 except Exception as error:
-    if 'Keyboard Interrupt' in error:
-        print("Assistant exited manually. Exiting JARVIS.")
-        exit()
-    else:
-        print("An error occured while running the code. Submitting the error to Github and restarting....")
-        file = open("Error.main.py.log", "a")
-        file.write(str(error))
-        file.close()
-        try:
-            import requests
-            import json
-            import os
-            #headers = {f"Authorization" : "token {token}"}
-            data = {"title": "JARVIS Error Reporting System Reported An Error"}
-            label = {"labels": ["Error"]}
-            body = {"body": [error]}
-            url = "https://api.github.com/repos/Hashah2311/JARVIS/issues"
-            #requests.post(url,data=json.dumps(data,label,body),headers=headers)
-            requests.post(url,data=json.dumps(data,label,body))
-            os.system("run.cmd")
-            #exit()
-        except:
-            print("Critical Crash!")
-            exit()
+    import os
+    os.system("cls")
+    print("An error occured while running the code. Submitting the error to Github....")
+    import token
+    tok = token.token
+    e = str(error)
+    import requests
+    import json
+    headers = {"Authorization" : "token {}".format(tok)}
+    data2 = {"title": "JARVIS Error Reporting System Reported An Error", "labels": ["Error"], "body": (e)}
+    url = "https://api.github.com/repos/Hashah2311/JARVIS/issues"
+    requests.post(url,data=json.dumps(data2),headers=headers)
+    exit()

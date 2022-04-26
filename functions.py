@@ -1,8 +1,8 @@
 try:
-    version = "V-0.3.5"
+    version = "V-0.4.0"
     mail = 'YOUR MAIL ID'
     password = 'YOUR MAIL PASSWORD(DONT WORRY)'
-    nversion = "V-beta-4"
+    nversion = "V-beta-4.5"
     import time
     import sys
     import os
@@ -21,14 +21,14 @@ try:
     import pyaudio
     import pyfiglet
     
-    engine = pyttsx.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    
     def speak(audio):
+        engine = pyttsx.init('sapi5')
+        voices = engine.getProperty('voices')
+        engine.setProperty('voice', voices[1].id)
         print(audio)
         engine.say(audio)
         engine.runAndWait()
+
     def wishMe():
         hour = int(datetime.datetime.now().hour)
         if hour>=6 and hour<12:
@@ -67,14 +67,26 @@ try:
     
     def intro():
         speak("Hello Sir or Mam! I am JARVIS. nice to meet you!")
-    
+
     def animation():
+        #A = "[----------]"
+        #B = "[#---------]"
+        #C = "[##--------]"
+        #D = "[###-------]"
+        #E = "[####------]"
+        #F = "[#####-----]"
+        #G = "[######----]"
+        #H = "[#######---]"
+        #I = "[########--]"
+        #J = "[#########-]"
+        #K = "[##########]"
         os.system("cls")
-        load_str = "STARTING JARVIS..."
+        load_str = "STARTING JARVIS"
         ls_len = len(load_str)
         print(version)
       
         animation = "|/-\\"
+        #animation = A,B,C,D,E,F,G,H,I,J,K
         anicount = 0
           
         counttime = 0        
@@ -167,28 +179,23 @@ try:
             speak(answer)
         except:
             speak("Sorry sir, I couldn't fetch your question's answer. Please try again.")
+
+except KeyboardInterrupt:
+    import os
+    os.system("cls")
+    print("Assistant exited manually. Exiting JARVIS.")
+    exit()
 except Exception as error:
-    if 'Keyboard Interrupt' in error:
-        print("Assistant exited manually. Exiting JARVIS.")
-        exit()
-    else:
-        print("An error occured while running the code. Submitting the error to Github and restarting....")
-        file = open("Error.functions.py.log", "a")
-        file.write(str(error))
-        file.close()
-        try:
-            import requests
-            import json
-            import os
-            #headers = {f"Authorization" : "token {token}"}
-            data = {"title": "JARVIS Error Reporting System Reported An Error"}
-            label = {"labels": ["Error"]}
-            body = {"body": [error]}
-            url = "https://api.github.com/repos/Hashah2311/JARVIS/issues"
-            #requests.post(url,data=json.dumps(data,label,body),headers=headers)
-            requests.post(url,data=json.dumps(data,label,body))
-            os.system("run.cmd")
-            #exit()
-        except:
-            print("Critical Crash!")
-            exit()
+    import os
+    os.system("cls")
+    print("An error occured while running the code. Submitting the error to Github....")
+    import token
+    tok = token.token
+    e = str(error)
+    import requests
+    import json
+    headers = {"Authorization" : "token {}".format(tok)}
+    data2 = {"title": "JARVIS Error Reporting System Reported An Error", "labels": ["Error"], "body": (e)}
+    url = "https://api.github.com/repos/Hashah2311/JARVIS/issues"
+    requests.post(url,data=json.dumps(data2),headers=headers)
+    exit()
