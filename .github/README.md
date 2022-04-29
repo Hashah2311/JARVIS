@@ -60,9 +60,9 @@
 18. Calculate anything
 
 ## To-Do
- - [ ] #9
- - [ ] #10
- - [ ] #11
+ - [ ] # 9
+ - [ ] # 10
+ - [ ] # 11
  - [ ] Sleep Mode :shipit:
  - [ ] Subtitles Function :trollface:
 
