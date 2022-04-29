@@ -58,6 +58,14 @@
 16. Unmute mic (Zoom/Teams)
 17. Check For Updates
 18. Calculate anything
+
+## To-Do
+ - [ ] #9
+ - [ ] #10
+ - [ ] #11
+ - [ ] Sleep Mode :shipit:
+ - [ ] Subtitles Function :trollface:
+
 ## Code Structure
 
 
