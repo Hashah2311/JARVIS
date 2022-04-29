@@ -60,8 +60,8 @@
 18. Calculate anything
 
 ## To-Do
- - [ ] https://github.com/Hasha2311/JARVIS/issues/9
- - [ ] https://github.com/Hasha2311/JARVIS/issues/10
+ - [ ] https://github.com/Hashah2311/JARVIS/issues/9
+ - [ ] https://github.com/Hashah2311/JARVIS/issues/10
  - [ ] https://github.com/Hashah2311/JARVIS/issues/11
  - [ ] Sleep Mode :shipit:
  - [ ] Subtitles Function :trollface:
