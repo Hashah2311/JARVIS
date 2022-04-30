@@ -61,9 +61,9 @@
 
 ## To-Do
  - [x] https://github.com/Hashah2311/JARVIS/issues/9
- - [ ] https://github.com/Hashah2311/JARVIS/issues/10
- - [ ] https://github.com/Hashah2311/JARVIS/issues/11
- - [ ] Sleep Mode :shipit:
+ - [x] https://github.com/Hashah2311/JARVIS/issues/10
+ - [x] https://github.com/Hashah2311/JARVIS/issues/11
+ - [x] Sleep Mode :shipit:
  - [ ] Subtitles Function :trollface:
 
 ## Code Structure
