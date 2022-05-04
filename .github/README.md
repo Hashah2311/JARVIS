@@ -65,13 +65,14 @@
  - [x] https://github.com/Hashah2311/JARVIS/issues/11
  - [x] Sleep Mode :shipit:
  - [ ] Subtitles Function :trollface:
+ - [ ] Pip package
 
 ## Code Structure
 
 
     ├── .github                                    # Github Files
     │   ├── workflows                              # Workflow Folder
-    |   |   └──python-app.yaml                     # Workflow File
+    │   │   └──python-app.yaml                     # Workflow File
     │   ├── README.md                              # This File
     │   ├── LICENSE.md                             # License File
     │   └── Editions.txt                           # Text File In Which Its Written What Parameters To Edit
