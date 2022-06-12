@@ -19,9 +19,9 @@ except Exception as error:
     import os
     os.system("cls")
     print("An error occured while running the code. Submitting the error to Github....")
-    import token
+    import toke as token
     tok = token.token
-    e = str(error)
+    e = f"{error!r}: Error occured while a JARVIS user was using the bot"
     import requests
     import json
     headers = {"Authorization" : "token {}".format(tok)}

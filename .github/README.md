@@ -63,8 +63,8 @@
  - [x] https://github.com/Hashah2311/JARVIS/issues/9
  - [x] https://github.com/Hashah2311/JARVIS/issues/10
  - [x] https://github.com/Hashah2311/JARVIS/issues/11
- - [x] Sleep Mode :shipit:
- - [ ] Subtitles Function :trollface:
+ - [x] Subtitles Function :shipit:
+ - [ ] Sleep Mode :trollface:
  - [ ] Pip package
 
 ## Code Structure

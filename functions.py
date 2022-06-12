@@ -1,8 +1,8 @@
 try:
-    version = "V-0.4.0"
     mail = 'YOUR MAIL ID'
     password = 'YOUR MAIL PASSWORD(DONT WORRY)'
-    nversion = "V-beta-4.5"
+    version = "V-0.4.5"
+    nversion = "V-beta-5"
     import time
     import sys
     import os
@@ -20,6 +20,7 @@ try:
     import wolframalpha
     import pyaudio
     import pyfiglet
+    import pyautogui as GUI
     
     def speak(audio):
         engine = pyttsx.init('sapi5')
@@ -37,10 +38,12 @@ try:
             speak("Good Afternoon!")
         else:
             speak("Good Evening!")
-        speak("I am Jarvis. Please tell me how may I help you!")      
+        speak("I am Jarvis. Please tell me how may I help you!")
+
     def takeCommand():
         r = sr.Recognizer()
-        with sr.Microphone() as source:
+        m = sr.Microphone()
+        with m as source:
             print("Now Listening...")
             r.pause_threshold = 1
             audio = r.adjust_for_ambient_noise(source)
@@ -49,14 +52,14 @@ try:
         try:    
             query = r.recognize_google(audio, language='en-IN')
             print(f"User Said:{query}")
-        except Exception:
+        except sr.RequestError:
             query = r.recognize_sphinx(audio, language='en-US')
             print(f"User Said:{query}")
-        except Exception as e:
-            #print(e)
-            print("Say that again please...")  
+        except sr.UnknownValueError:
+            print("Say that again please...")
             return "None"
         return query
+
     def sendEmail(to, content):
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
@@ -64,9 +67,6 @@ try:
         server.login(mail, password)
         server.sendmail(mail, to, content)
         server.close()
-    
-    def intro():
-        speak("Hello Sir or Mam! I am JARVIS. nice to meet you!")
 
     def animation():
         #A = "[----------]"
@@ -137,39 +137,51 @@ try:
             os.system("cls")
     
     def news():
-        speak("Searching For News...")
-        news_headlines = []
-        res = requests.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=3c7091dbbd9547cca52fcd852572d7a9&category=general").json()
-        articles = res["articles"]
-        for article in articles:
-            news_headlines.append(article["title"])
-        speak(news_headlines[:5])
-    
+        try:
+            speak("Searching For News...")
+            news_headlines = []
+            res = requests.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=3c7091dbbd9547cca52fcd852572d7a9&category=general").json()
+            articles = res["articles"]
+            for article in articles:
+                news_headlines.append(article["title"])
+            speak(news_headlines[:5])
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
     def joke():
-        headers = {
-            'Accept': 'application/json'
-        }
-        res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
-        jokes = res["joke"]
-        speak(jokes)
+        try:
+            headers = {
+                'Accept': 'application/json'
+            }
+            res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
+            jokes = res["joke"]
+            speak(jokes)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
     
     def advice():
-        res = requests.get("https://api.adviceslip.com/advice").json()
-        advice = res['slip']['advice']
-        speak(advice)
+        try:
+            res = requests.get("https://api.adviceslip.com/advice").json()
+            advice = res['slip']['advice']
+            speak(advice)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
     
     def unmute_mic():
         os.system("env\python.exe mic\process.py")
     
     def updates():
-        link = f"https://www.github.com/Hashah2311/JARVIS/releases/tag/{nversion}"
         try:
-            urllib.request.urlopen(link)
-            speak("Updates Available!")
-            speak("Opening update page in browser")
-            webbrowser.open(link)
-        except urllib.error.HTTPError:
-            speak("No new update available currently")
+            link = f"https://www.github.com/Hashah2311/JARVIS/releases/tag/{nversion}"
+            try:
+                urllib.request.urlopen(link)
+                speak("Updates Available!")
+                speak("Opening update page in browser")
+                webbrowser.open(link)
+            except urllib.error.HTTPError:
+                speak("No new update available currently")
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
     
     def calculate(question):
         try:
@@ -179,6 +191,91 @@ try:
             speak(answer)
         except:
             speak("Sorry sir, I couldn't fetch your question's answer. Please try again.")
+    
+    def wikipedia_search(query):
+        try:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=5)
+            speak("Here's what I found")
+            speak("According to Wikipedia")
+            speak(results)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+    
+    def google_search(query):
+        try:
+            speak("Searching Google...")
+            query = query.replace('google', '')
+            query = query.replace(' ', '+')
+            google = "https://google.com/search?q=" + query
+            speak("Found! Redirecting...")
+            webbrowser.open(google)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
+    def get_weather():
+        try:
+            speak("Detecting your city...")
+            url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=85ef8f826f7e42c6ad55b2f3f2d45758'
+            response = urllib.request.urlopen(url)
+            data = json.load(response)
+            city = data['city']
+            speak("Getting weather for")
+            speak(city)
+            google = "https://google.com/search?q=weather+in+" + city
+            google2 = requests.get(google)
+            soup = bs4.BeautifulSoup(google2.text, "html.parser" )
+            temp = soup.find( "div" , class_='BNeawe' ).text
+            weather_url = 'https://api.openweathermap.org/data/2.5/weather?' + 'q=' + city + '&appid=6df3640e0f36dfc3479361494ac0dfcd'
+            request_result = requests.get(weather_url)
+            data = request_result.json()
+            main = data['main']
+            humidity = main['humidity'], "%"
+            speak("Condition in your city:")
+            speak("Temperature:")
+            speak(temp)
+            speak("Humidity:")
+            speak(humidity)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
+    def get_ip():
+        try:
+            speak("Searching for your ip...")
+            base = requests.get('https://api64.ipify.org?format=json').json()
+            ip = base['ip']
+            speak("Your ip is")
+            speak(ip)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
+    def search_youtube():
+        try:
+            speak("What should I search?")
+            search = takeCommand()
+            speak("Ok. Searching Youtube...")
+            search = search.replace(' ', '+')
+            youtube = "https://www.youtube.com/results?search_query=" + search
+            speak("Found! Opening youtube...")
+            webbrowser.open(youtube)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
+    def search_google(query):
+        try:
+            speak("Searching Google for")
+            speak(query)
+            query = query.replace('google', '')
+            query = query.replace(' ', '+')
+            google = "https://google.com/search?q=" + query
+            speak("Found! Opening On google.")
+            webbrowser.open(google)
+        except:
+            speak("No Internet Connection Detected. Please connect to internet and try again")
+
+    def subtitles():
+        GUI.hotkey('win', 'ctrl', 'l')
 
 except KeyboardInterrupt:
     import os
@@ -189,9 +286,9 @@ except Exception as error:
     import os
     os.system("cls")
     print("An error occured while running the code. Submitting the error to Github....")
-    import token
+    import toke as token
     tok = token.token
-    e = str(error)
+    e = f"{error!r}: Error occured while a JARVIS user was using the bot"
     import requests
     import json
     headers = {"Authorization" : "token {}".format(tok)}
