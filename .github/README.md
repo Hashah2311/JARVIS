@@ -58,6 +58,7 @@
 16. Unmute mic (Zoom/Teams)
 17. Check For Updates
 18. Calculate anything
+19. Provides subtitles
 
 ## To-Do
  - [x] https://github.com/Hashah2311/JARVIS/issues/9
