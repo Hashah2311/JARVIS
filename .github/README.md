@@ -61,22 +61,14 @@
 19. Provides subtitles
 
 ## To-Do
- - [x] https://github.com/Hashah2311/JARVIS/issues/9
- - [x] https://github.com/Hashah2311/JARVIS/issues/10
- - [x] https://github.com/Hashah2311/JARVIS/issues/11
- - [x] Subtitles Function :shipit:
- - [ ] Sleep Mode :trollface:
+ - [x] Sleep Mode
  - [ ] Pip package
+ - [ ] App GUI
 
 ## Code Structure
 
 
     ├── .github                                    # Github Files
-    │   ├── workflows                              # Workflow Folder
-    │   │   └──python-app.yaml                     # Workflow File
-    │   ├── README.md                              # This File
-    │   ├── LICENSE.md                             # License File
-    │   └── Editions.txt                           # Text File In Which Its Written What Parameters To Edit
     ├── .vscode                                    # VSCode Config Files
     ├── __pycache__                                # Cache Folder
     ├── env                                        # ENV
@@ -89,14 +81,13 @@
     │   └── speak_f.py                             # Speak Function File
     ├── .gitattributes                             # gitattributes File
     ├── .gitignore                                 # gitignore File
-    ├── token.py                                   # Token File
-    ├── Main.py                                    # Main JARVIS File
-    ├── functions.py                               # Functions
-    ├── __init__.py                                # Starting File
+    ├── toke.py                                    # Token File
+    ├── __main__.py                                # JARVIS Functions Implementation File
+    ├── __init__.py                                # Main Functions File
     ├── run.cmd                                    # Command Prompt Script To Run The Program
     └── run.ps1                                    # Powershell Script To Run The Program
 
 ## Editions
-#### Please See [Editions](Editions.txt) file.
+#### Please See [Editions](Editions.md) file.
 ## Extras
 #### If you have any issues, you can post it in the issues page and I will try to solve it ASAP. If you are interested to know more about the code,etc. you can mail me on "shahharshit063@gmail.com". Thank you I will close for now, I am also working on the tutorial video so stay tuned!
