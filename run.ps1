@@ -1,1 +1,1 @@
-env\python.exe __init__.py
+env\python.exe __main__.py
